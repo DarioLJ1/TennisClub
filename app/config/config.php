@@ -2,25 +2,25 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '666666');
-define('DB_NAME', 'tennisclub');
+define('DB_HOST', getenv('DB_HOST') ?: 'localhost');
+define('DB_USER', getenv('DB_USER') ?: 'root');
+define('DB_PASS', getenv('DB_PASS') ?: '666666');
+define('DB_NAME', getenv('DB_NAME') ?: 'tennisclub');
 
 define('APPROOT', dirname(dirname(__FILE__)));
-define('URLROOT', 'http://localhost/TennisClub');
+define('URLROOT', getenv('URLROOT') ?: 'http://localhost/TennisClub');
 define('SITENAME', 'HomeTennis');
 
 define('PUBLICPATH', dirname(APPROOT) . '/public');
 
-define('EMAIL_HOST', 'smtp.gmail.com');
-define('EMAIL_USERNAME', 'dariolara25@gmail.com');
-define('EMAIL_PASSWORD', 'gxxp zikn itmd bckd');
-define('EMAIL_FROM', 'dariolara25@gmail.com');
-define('EMAIL_NAME', 'HomeTennis');
-define('EMAIL_PORT', 587);
+define('EMAIL_HOST', getenv('EMAIL_HOST') ?: 'smtp.gmail.com');
+define('EMAIL_USERNAME', getenv('EMAIL_USERNAME') ?: 'dariolara25@gmail.com');
+define('EMAIL_PASSWORD', getenv('EMAIL_PASSWORD') ?: 'gxxp zikn itmd bckd');
+define('EMAIL_FROM', getenv('EMAIL_FROM') ?: 'dariolara25@gmail.com');
+define('EMAIL_NAME', getenv('EMAIL_NAME') ?: 'HomeTennis');
+define('EMAIL_PORT', getenv('EMAIL_PORT') ?: 587);
 
-// Cargar Composer autoloader una sola vez
+// Cargar Composer autoloader
 require_once APPROOT . '/../vendor/autoload.php';
 
 // Cargar ayudantes

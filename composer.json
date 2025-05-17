@@ -1,6 +1,7 @@
 {
+    "name": "dariolj1/tennisclub",
+    "description": "Aplicación web para gestionar un club de tenis",
     "require": {
-        "phpmailer/phpmailer": "^6.9",
-        "tecnickcom/tcpdf": "^6.8"
+        "php": ">=7.4"
     }
 }
